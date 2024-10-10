@@ -31,24 +31,29 @@
         echo("Error de email");
     }
 
-    if (preg_match("/^[a-zA-Z0-9._-]$/", $nombre)) {
+    if (preg_match("/^[a-zA-Z_-]+[a-zA-Z.-]+[a-zA-Z]$/", $nombre)) {
         echo("El nombre es valido");
      } else {
         echo "Error de nombre";
      }
 
 
-     if (preg_match("/^[0-9]$/", $edad)) {
+     if (preg_match("/^[0-9]+[0-9]$/", $edad)) {
         echo("La edad es valida");
      } else {
         echo ("Error de edad");
      }
  
-     if (preg_match("/^[a-zA-Z]$/", $pais)) {
+     if (preg_match("/^[a-zA-Z]+[a-zA-Z.-]+[a-zA-Z]$/", $pais)) {
          echo("El pais es valido");
       } else {
         echo ("Error de pais");
       }
+
+
+      session_start();
+      $_SESSION['nombre'] = $nombre;
+      echo "Usuario sesion: ". $_SESSION['nombre'];
 ?>
 </body>
 </html>
