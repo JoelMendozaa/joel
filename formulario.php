@@ -56,6 +56,7 @@
            $_SESSION['nombre'] = $nombre;
            echo "Usuario sesion: ". $_SESSION['nombre'];
     }
+
 ?>
 </body>
 </html>
